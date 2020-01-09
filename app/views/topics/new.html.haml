@@ -1,0 +1,6 @@
+= form_with model: @topic, local: true  do |form|
+  = form.text_area :text
+  %br/
+  = form.file_field :image
+  %br/
+  = form.submit

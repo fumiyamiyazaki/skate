@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.header {
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 20px;
+  .header__text {
+    // color: #ccc;
+    .home__link {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 50px;
+      display: flex;
+      i {
+        color: black;
+      }
+      p {
+        font-size: 50px;
+        color: #ccc;
+      }
+      p:hover {
+        color: black;
+      }
+    }
+  }
+  .header__search {
+    .icon-search {
+      text-align: center;
+      line-height: 100px;
+      margin-right: 50px;
+      font-size: 30px;
+      color: #ccc;
+    }
+    .icon-search:hover {
+      color: black;
+    }
+  }
+}
+
+.contents {
+  height: calc(100vh - 50px - 30px);
+  background-color: #fff;
+  overflow: scroll;
+  margin: 50px 0 50px 0;
+  width: auto;
+  // overflow: hidden;
+  .content__text{
+    p{
+      font-size: 20px;
+      color: rgb(56, 55, 55);
+    }
+  }
+  .content__videos{
+    display: flex;
+    justify-content: space-around;
+    animation: infinity-loop 30s infinite linear 1s both;
+
+    .content__video {
+      height: 400px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    @keyframes infinity-loop {
+      from {
+        transform: translateX(0vw);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  }
+  .content__follow-text {
+    margin-top: 100px;
+    p {
+      font-size: 20px;
+      color: black;
+    }
+  }
+  .content__follow-videos {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    animation: infinity-loop 30s infinite linear 1s both;
+    .follow-video {
+      height: 150px;
+      width: 150px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+}
+
+.footer__nav {
+  height: 60px;
+  background-color: #fff;
+  // border-top: 1px solid black;
+  box-shadow: 3px 0 2px #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  // z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  i {
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    color: #ccc;
+  }
+  i:hover {
+    color: black;
+  }
+}
+

@@ -1,0 +1,37 @@
+.header
+  .header__text
+    =link_to root_path, class: 'home__link' do
+      =icon 'fas', 'snowboarding'
+      %p skate・session
+  .header__search
+    =link_to '#', class: 'search__link' do
+      =icon 'fas', 'search', class: "icon-search"
+    
+
+  
+
+.contents
+  .content__text 
+    %p トレンド
+  .content__videos
+    .content__video
+    .content__video
+    .content__video
+    .content__video
+  .content__follow-text
+    %p フォロー
+  .content__follow-videos
+    .follow-video
+    .follow-video
+    .follow-video
+    .follow-video
+    .follow-video
+
+
+
+.footer__nav
+  =icon 'fas', 'bars'
+  =icon 'fas', 'home'
+  =icon 'fas', 'snowboarding'
+  =icon 'fas', 'user-alt'
+  =icon 'fas', 'search'
