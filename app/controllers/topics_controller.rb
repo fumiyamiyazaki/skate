@@ -20,7 +20,7 @@ class TopicsController < ApplicationController
 
   private
   def topic_params
-    params.require(:topic).permit(:name, :text, :image).merge(user_id: current_user.id)
+    params.require(:topic).permit(:text, :image).merge(user_id: current_user.id)
   end
 
   def set_topic
