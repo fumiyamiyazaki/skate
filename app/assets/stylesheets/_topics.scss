@@ -29,7 +29,16 @@
       }
     }
   }
-  .header__search {
+  .header__right-nav {
+    .header__user-btn {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 20px;
+      margin-right: 70px;
+    }
+    .header__user-btn:hover {
+      color: black;
+    }
     .icon-search {
       text-align: center;
       line-height: 100px;
