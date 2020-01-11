@@ -108,13 +108,13 @@
   // z-index: 1;
   display: flex;
   justify-content: space-around;
-  i {
+  .nav__icon {
     text-align: center;
     line-height: 60px;
     font-size: 30px;
     color: #ccc;
   }
-  i:hover {
+  .nav__icon:hover {
     color: black;
   }
 }
