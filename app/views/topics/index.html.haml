@@ -4,6 +4,11 @@
       =icon 'fas', 'snowboarding'
       %p skate・session
   .header__search
+    - if user_signed_in?
+      =link_to "logout", destroy_user_session_path, class: 'header__logout-btn'
+    - else
+      =link_to "login", new_user_session_path, class: 'header__login-btn'
+      =link_to "signup", new_user_registration_path, class: 'header__signup-btn'
     =link_to '#', class: 'search__link' do
       =icon 'fas', 'search', class: "icon-search"
     
@@ -33,8 +38,13 @@
 
 
 .footer__nav
-  =icon 'fas', 'bars'
-  =icon 'fas', 'home'
-  =icon 'fas', 'snowboarding'
-  =icon 'fas', 'user-alt'
-  =icon 'fas', 'search'
+  =link_to '#', class: 'nav__icon' do
+    =icon 'fas', 'bars'
+  =link_to '#', class: 'nav__icon' do
+    =icon 'fas', 'home'
+  =link_to new_topic_path, class: 'nav__icon' do
+    =icon 'fas', 'snowboarding'
+  =link_to '#', class: 'nav__icon' do
+    =icon 'fas', 'user-alt'
+  =link_to '#', class: 'nav__icon' do
+    =icon 'fas', 'search'

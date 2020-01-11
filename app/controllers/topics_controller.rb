@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show]
 
   def index
-    @topics = Topic.all
+    @topics = Topic.includes(:user)
   end
 
   def new
@@ -20,7 +20,7 @@ class TopicsController < ApplicationController
 
   private
   def topic_params
-    params.require(:topic).permit(:name, :text, :image)
+    params.require(:topic).permit(:name, :text, :image).merge(user_id: current_user.id)
   end
 
   def set_topic
