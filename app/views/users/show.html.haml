@@ -1,0 +1,28 @@
+.user__header-show
+  = current_user.nickname
+
+.user__content-show
+  .user__content-right
+  .user__content-left
+    .user__nickname-show
+      = current_user.nickname
+    .user__email-show
+      = current_user.email
+    .user__status-show
+      .topics__status
+        2
+        %p topics
+      .following__status
+        12
+        %p following
+      .followers__status
+        12
+        %p followers
+    .user__follow-btn
+      %button{type: 'submit', class: 'follow__btn-show'}
+        follow
+
+
+.user__topics-content
+  .topics__navbar
+  .topics__contents

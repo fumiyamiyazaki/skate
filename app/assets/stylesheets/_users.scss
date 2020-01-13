@@ -1,0 +1,67 @@
+.user__header-show {
+  background-color: #ccc;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+}
+
+.user__content-show {
+  display: flex;
+  .user__content-right {
+    background-color: #ccc;
+    width: 50%;
+    height: 500px;
+    opacity: 0.2;
+  }
+  .user__content-left {
+    width: 50%;
+    height: 500px;
+
+    .user__nickname-show {
+      text-align: center;
+      padding-top: 50px;
+      font-size: 45px;
+    }
+    .user__email-show {
+      text-align: center;
+      font-size: 20px;
+      color: #ccc;
+    }
+    .user__status-show {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 100px;
+      font-size: 30px;
+      text-align: center;
+      p {
+        color: #ccc;
+        font-size: 20px;
+      }
+    }
+    .user__follow-btn {
+      padding-top: 100px;
+      text-align: center;
+      .follow__btn-show {
+        text-decoration: none;
+        color: #fff;
+        background-color: #0099eb;
+        height: 50px;
+        width: 300px;
+        font-size: 20px;
+        border-radius: 30px;
+        border: 1px solid #0099eb;
+      }
+      .follow__btn-show:focus {
+        outline: none;
+      }
+      .follow__btn-show:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+      
+    }
+    
+  }
+}
