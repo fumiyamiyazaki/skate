@@ -5,6 +5,7 @@
       %p skate・session
   .header__right-nav
     - if user_signed_in?
+      -# =@user.nickname
       =link_to "logout", destroy_user_session_path, method: :delete, class: 'header__user-btn'
     - else
       =link_to "login", new_user_session_path, class: 'header__user-btn'
@@ -38,13 +39,4 @@
 
 
 .footer__nav
-  =link_to '#', class: 'nav__icon' do
-    =icon 'fas', 'bars'
-  =link_to '#', class: 'nav__icon' do
-    =icon 'fas', 'home'
-  =link_to new_topic_path, class: 'nav__icon' do
-    =icon 'fas', 'snowboarding'
-  =link_to user_path(current_user), class: 'nav__icon' do
-    =icon 'fas', 'user-alt'
-  =link_to '#', class: 'nav__icon' do
-    =icon 'fas', 'search'
+  = render 'shared/footer_nav'

@@ -1,11 +1,11 @@
 .user__header-show
-  = current_user.nickname
+  = @user.nickname
 
 .user__content-show
   .user__content-right
   .user__content-left
     .user__nickname-show
-      = current_user.nickname
+      = @user.nickname
     .user__email-show
       = current_user.email
     .user__status-show
@@ -25,4 +25,11 @@
 
 .user__topics-content
   .topics__navbar
+    %button{type: 'button', class: 'image__btn'}
+      Images
+    %button{type: 'button', class: 'video__btn'}
+      Videos
   .topics__contents
+
+.user__nav-show
+  = render 'shared/footer_nav'
