@@ -44,7 +44,7 @@
     =icon 'fas', 'home'
   =link_to new_topic_path, class: 'nav__icon' do
     =icon 'fas', 'snowboarding'
-  =link_to '#', class: 'nav__icon' do
+  =link_to user_path(current_user), class: 'nav__icon' do
     =icon 'fas', 'user-alt'
   =link_to '#', class: 'nav__icon' do
     =icon 'fas', 'search'
