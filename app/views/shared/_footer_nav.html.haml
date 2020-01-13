@@ -1,0 +1,11 @@
+.footer__nav
+  =link_to '#', class: 'nav__icon' do
+    =icon 'fas', 'bars'
+  =link_to root_path, class: 'nav__icon' do
+    =icon 'fas', 'home'
+  =link_to new_topic_path, class: 'nav__icon' do
+    =icon 'fas', 'snowboarding'
+  =link_to user_path(current_user), class: 'nav__icon' do
+    =icon 'fas', 'user-alt'
+  =link_to '#', class: 'nav__icon' do
+    =icon 'fas', 'search'
