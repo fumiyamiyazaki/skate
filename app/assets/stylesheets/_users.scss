@@ -9,13 +9,25 @@
 
 .user__content-show {
   display: flex;
-  .user__content-right {
+  .user__content-left {
     background-color: #ccc;
     width: 50%;
     height: 500px;
     opacity: 0.2;
+    .user__img-icon {
+      padding: 450px 0 0 650px;
+      .img__label-show {
+        font-size: 30px;
+        input {
+          display: none;
+        } 
+      }
+      .img__label-show:hover {
+        color: #333;
+      }
+    }
   }
-  .user__content-left {
+  .user__content-right {
     width: 50%;
     height: 500px;
 
@@ -41,7 +53,7 @@
       }
     }
     .user__follow-btn {
-      padding-top: 100px;
+      padding-top: 60px;
       text-align: center;
       .follow__btn-show {
         text-decoration: none;

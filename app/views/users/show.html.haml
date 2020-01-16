@@ -2,8 +2,15 @@
   = @user.nickname
 
 .user__content-show
-  .user__content-right
   .user__content-left
+    -# =image_tag current_user.image.url
+    .user__img-icon
+      = form_for(@user) do |f|
+        = f.label :image, class: 'img__label-show' do
+          =icon 'fas', 'clone', class: 'clone-icon'
+          =f.file_field :image
+
+  .user__content-right
     .user__nickname-show
       = @user.nickname
     .user__email-show
