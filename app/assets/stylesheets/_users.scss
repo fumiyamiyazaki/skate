@@ -10,20 +10,30 @@
 .user__content-show {
   display: flex;
   .user__content-left {
-    background-color: #ccc;
+    background-color: rgba(243, 241, 241, 0.911);
     width: 50%;
     height: 500px;
-    opacity: 0.2;
+    position: relative;
     .user__img-icon {
-      padding: 450px 0 0 650px;
+      position: absolute;
+      top: 90%;
+      left: 85%;
+      // padding: 420px 0 0 650px;
       .img__label-show {
         font-size: 30px;
-        input {
+        color: #333;
+        .image__file-show {
           display: none;
-        } 
+        }
       }
       .img__label-show:hover {
-        color: #333;
+        opacity: 0.6;
+      }
+      .image__submit-show {
+        height: 30px;
+        width: 30px;
+        border-radius: 1px;
+        // display: none;
       }
     }
   }
