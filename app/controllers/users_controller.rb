@@ -6,8 +6,14 @@ class UsersController < ApplicationController
     @topics = @user.topics.all
   end
 
+
   def edit
     @user = User.find(params[:id])
+  end
+
+  def create
+    @user = User.create(user_params)
+    redirect_to user_path(@user)
   end
 
   def update
@@ -22,7 +28,7 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(user).permit(:nickname, :email, :password, :password_confirmation, :image)
+    params.require(:user).permit(:nickname, :email, :password, :password_confirmation, :image)
   end
 
 end
