@@ -1,31 +1,31 @@
-.sign_up__contents
-  .sign_up__title
+.user_account__contents
+  .user_account__title
     %h2 Sign up
-  .sign_up__form
+  .user_account__form
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
 
       .field
-        = f.label :nickname
+        = f.label :nickname, class: 'user__label-new'
         %br/
-        = f.text_field :nickname, autofocus: true
+        = f.text_field :nickname, autofocus: true, class: 'user__field-new'
       .field
-        = f.label :email
+        = f.label :email, class: 'user__label-new'
         %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email"
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: 'user__field-new'
       .field
-        = f.label :password
+        = f.label :password, class: 'user__label-new'
         - if @minimum_password_length
           %em
             (#{@minimum_password_length} characters minimum)
         %br/
-        = f.password_field :password, autocomplete: "new-password"
+        = f.password_field :password, autocomplete: "new-password", class: 'user__field-new'
       .field
-        = f.label :password_confirmation
+        = f.label :password_confirmation, class: 'user__label-new'
         %br/
-        = f.password_field :password_confirmation, autocomplete: "new-password"
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: 'user__field-new'
       .actions
-        = f.submit "Sign up"
+        = f.submit "Sign up", class: 'user__submit-new'
 
 
-      = render "devise/shared/links"
+    = render "devise/shared/links"

@@ -1,0 +1,71 @@
+.user_account__contents {
+  position: relative;
+  height: 100vh;
+  .user_account__title {
+    color: #333;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .user_account__form {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    color: black;
+    .field {
+      padding-bottom: 10px;
+      .user__field-new {
+        border: 1px solid #fff;
+        border-radius: 5px;
+      }
+      .user__field-new:focus {
+        outline: none;
+        border: 1px solid #333;
+      }           
+    }
+    .actions {
+      padding: 20px 0px 20px;
+      .user__submit-new {
+        height: 40px;
+        width: 180px;
+        color: #fff;
+        border-radius: 10px;
+        background-color: #333;
+        border: 1px solid #333;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+        outline: none;
+      }
+      .user__submit-new:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .user__submit-new:active {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+        box-shadow: none;
+      }
+    }
+  }
+}
+.user_account__contents::before {
+display: block;
+width: 100%;
+height: 100%;
+content: " ";
+position: absolute;
+background-image: url(https://www.henobu.com/wp-content/uploads/2016/10/4232d1a6c5b37820565c88bf105df0ce_m.jpg);
+background-size: cover;
+background-position: center;
+opacity: 0.5; 
+z-index: -1;
+}
+
+// ------devise/shared/links-------------
+
+.link__user-account {
+  text-decoration: none;
+  color: #fff;
+}
+
+
