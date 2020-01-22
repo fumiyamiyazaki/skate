@@ -2,7 +2,8 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show]
 
   def index
-    @topics = Topic.includes(:user)
+    # @topics = Topic.includes(:user)
+    @topics = Topic.all.with_attached_images
   end
 
   def new
@@ -10,8 +11,9 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.create(topic_params)
-    redirect_to @topic
+    topic = Topic.create!(topic_params)
+    topic.images.attach(params[:topic][:images])
+    redirect_to topic
   end
 
   def show
@@ -20,7 +22,7 @@ class TopicsController < ApplicationController
 
   private
   def topic_params
-    params.require(:topic).permit(:text, images: []).merge(user_id: current_user.id)
+    params.require(:topic).permit(:text, :image,images: []).merge(user_id: current_user.id)
   end
 
   def set_topic

@@ -13,13 +13,13 @@
           =f.file_field :image, class: 'image__file-show'
         =f.label :submit, class: 'submit__label' do
           =icon 'fas', 'exchange-alt'
-          =f.submit '画像を変更する', class: 'image__submit-show' 
+          =f.submit '変更', class: 'image__submit-show' 
 
   .user__content-right
     .user__nickname-show
       = @user.nickname
     .user__email-show
-      = current_user.email
+      = @user.email
     .user__status-show
       .topics__status
         =@user.topics_count
@@ -35,13 +35,22 @@
         follow
 
 
-.user__topics-content
+.user__topics-navbar
   .topics__navbar
     %button{type: 'button', class: 'image__btn'}
       Images
     %button{type: 'button', class: 'video__btn'}
       Videos
-  .topics__contents
+
+.user__topics-contents
+  - @topics.each do |topic|
+    -# .user__topics-show
+      -# =image_tag @topic.images
+    .user__topics-show{:style => "background-image: url(#{topic.images});"}
+  
+
+  
+  
   
 
 .user__nav-show

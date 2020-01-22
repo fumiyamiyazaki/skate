@@ -85,7 +85,7 @@
     }
   }
 }
-.user__topics-content {
+.user__topics-navbar {
   // padding-top: 5px;
   .topics__navbar {
     height: 50px;
@@ -123,6 +123,16 @@
       opacity: 0.8;
       cursor: pointer;
     }
+  }
+}
+.user__topics-contents {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  .user__topics-show {
+    width: 25%;
+    height: calc(100vh - 50vh);
+    border: 2px solid #ccc;
   }
 }
 

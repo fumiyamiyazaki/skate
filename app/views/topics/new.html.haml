@@ -1,9 +1,9 @@
-= form_with model: @topic, local: true  do |form|
-  = form.text_area :text
+= form_for(@topic, url: topics_path) do |f|
+  = f.text_area :text
   %br/
-  = form.file_field :image
+  = f.file_field :images, multiple: true, value: ""
   %br/
-  = form.submit
+  = f.submit
 
 =link_to "home", root_path, class: 'new__root-btn'
 
