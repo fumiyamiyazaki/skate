@@ -1,12 +1,32 @@
-= form_for(@topic, url: topics_path) do |f|
-  = f.text_area :text
-  %br/
-  = f.file_field :images, multiple: true, value: ""
-  %br/
-  = f.submit
+.topic__post-form
+  = form_for(@topic, html: { multipart: true }) do |f|
+    = f.text_area :text, class: 'topic__text-field'
+    %br/
+    = f.file_field :post,class: 'topic__post-field'
+    %span
+      = f.submit "Post", class: 'topic__submit-btn'
 
-=link_to "home", root_path, class: 'new__root-btn'
-
+  -if @topic.post.present?
+    =image_tag @topic.post.url, class: 'post_prev'
+  -else
+    =image_tag "sample2.jpg", class: 'post_prev'
 
 .footer__nav-new
   = render 'shared/footer_nav'
+
+
+:javascript
+  window.onload = function(){
+    function readURL(input){
+      if(input.files && input.files[0]){
+        var reader = new FileReader();
+        reader.onload = function(e){
+          $('.post_prev').attr('src',e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    $('.topic__post-fiels').change(function(){
+      readURL(this);
+    });
+  };

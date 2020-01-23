@@ -1,0 +1,27 @@
+.topic__post-form {
+  position: relative;
+  height: 100vh;
+  .topic__text-field {
+
+  }
+  .topic__post-field {
+
+  }
+  .topic__submit-btn {
+
+  }
+}
+.topic__post-form::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  position: absolute;
+  background-image: url(https://www.henobu.com/wp-content/uploads/2016/10/4232d1a6c5b37820565c88bf105df0ce_m.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; 
+  z-index: -1;
+}
+  
+  
