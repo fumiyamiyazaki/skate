@@ -45,8 +45,8 @@
 .user__topics-contents
   - @topics.each do |topic|
     -# .user__topics-show
-      -# =image_tag @topic.images
-    .user__topics-show{:style => "background-image: url(#{topic.images});"}
+      -# =image_tag topic.post.url
+    .user__topics-show{:style => "background-image: url(#{topic.post});"}
   
 
   

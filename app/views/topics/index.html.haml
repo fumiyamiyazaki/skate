@@ -17,19 +17,22 @@
   
 
 .contents
-  .content__text 
-    %p トレンド
-  .content__videos
-    .content__video
-        
+  .top__contents
+    .content__text 
+      %p トレンド
+    .content__videos
+      - @topics.each do |topic|
+        .content__video
+          .topics__post{:style => "background-image: url(#{topic.post});"}
+          
       
         
       -# - if @topic.image.attached?
       -#   = image_tag @topic.image
 
-    .content__video
-    .content__video
-    .content__video
+    -# .content__video
+    -# .content__video
+    -# .content__video
   .content__follow-text
     %p フォロー
   .content__follow-videos

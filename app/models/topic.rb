@@ -1,11 +1,12 @@
 class Topic < ApplicationRecord
 
-  has_many_attached :images
-
   belongs_to :user
+
+  # has_many_attached :images
+
+  mount_uploader :post, PostUploader
 
   counter_culture :user
 
-  # mount_uploader :image, ImageUploader
 
 end
