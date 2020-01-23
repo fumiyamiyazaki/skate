@@ -69,3 +69,4 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'counter_culture'
+gem "jquery-rails"
