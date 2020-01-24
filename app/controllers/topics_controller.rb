@@ -13,7 +13,13 @@ class TopicsController < ApplicationController
   def create
     topic = Topic.create!(topic_params)
     # topic.images.attach(params[:topic][:images])
-    redirect_to root_path
+    redirect_to topic
+  end
+
+  def destroy
+    topic = Topic.find(params[:id])
+    topic.destroy
+    redirect_to user_path(current_user)
   end
 
   def show

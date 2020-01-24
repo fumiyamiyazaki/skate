@@ -1,0 +1,8 @@
+.topic__post-topic
+  = image_tag @topic.post.url, width: '500px', height: '500px'
+  .topic__text-topic
+    = simple_format @topic.text
+    %span.name
+      =link_to user_path(@topic.id)
+      %span 投稿者
+      = @topic.user.nickname
