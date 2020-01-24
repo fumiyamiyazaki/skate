@@ -60,9 +60,12 @@
   width: auto;
   .top__contents {
     height: 500px;
+    width: 100%;
     // background-color: rgba(243, 241, 241, 0.911);
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    
     .content__text{
       p{
         font-size: 20px;
@@ -71,19 +74,27 @@
       }
     }
     .content__videos{
+      height: 100%;
+      width: 100%;
       display: flex;
       justify-content: space-around;
-      overflow: hidden;
+      position: relative;
+      overflow-x: hidden;
       animation: infinity-loop 30s infinite linear 1s both;
+      
       .content__video {
         height: 400px;
-        width: 400px;
-        margin-right: 30px;
+        width: 350px;
+        margin-right: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
+        
         .topics__post {
           height: 100%;
           width: 100%;
+          background-size: cover;
+          background-position: center center;
+          
         }
       }
       @keyframes infinity-loop {

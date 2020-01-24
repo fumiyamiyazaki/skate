@@ -1,5 +1,21 @@
-= image_tag @topic.post.url
-
+.topic__post-header
+  %span 投稿者:
+  =link_to user_path(@topic.user.id), class: 'user__nickname-header-show' do
+    = @topic.user.nickname
+  -if user_signed_in? && current_user.id == @topic.user_id
+    =link_to topic_path(@topic.id), method: :delete, class: 'topic__delete-show' do
+      =icon 'far', 'trash-alt'
+      
+.topic__post-show
+  = image_tag @topic.post.url, width: '60%', height: '70%', class: 'topic__img-show'
+.topic__text-show
+  %br/
+  =@topic.user.nickname
+  %span ...
+  %br/
+  %br/
+  = simple_format @topic.text, class: 'topic__text-format-show'
+  
 
 .footer__nav-show
   =render 'shared/footer_nav'

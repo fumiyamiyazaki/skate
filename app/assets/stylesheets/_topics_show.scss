@@ -1,0 +1,54 @@
+.topic__post-header {
+  height: 80px;
+  border-bottom: 1px solid #333;
+  text-align: left;
+  line-height: 80px;
+  position: relative;
+  span {
+    font-size: 15px;
+    padding-left: 20px;
+  }
+  .user__nickname-header-show {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding-left: 20px;
+    font-family: 'Comic Sans MS';
+  }
+  .user__nickname-header-show:hover {
+    color: blue;
+  }
+  .topic__delete-show {
+    position: absolute;
+    right: 60px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #333;
+  }
+}
+.topic__post-show {
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: #fff;
+  .topic__img-show {
+    border: 3px solid #ccc;
+  }
+}
+.topic__text-show {
+  height: 300px;
+  font-size: 13px;
+  border-top: 1px solid #333;
+  font-size: 30px;
+  padding-left: 20px;
+  font-family: 'Comic Sans MS';
+  
+  // overflow: scroll;
+  .topic__text-format-show {
+    font-size: 20px;
+    font-family: 'Hiragino Mincho Pro';
+    padding-left: 50px;
+  }
+}

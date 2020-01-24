@@ -12,27 +12,18 @@
       =link_to "signup", new_user_registration_path, class: 'header__user-btn'
     =link_to '#', class: 'search__link' do
       =icon 'fas', 'search', class: "icon-search"
-    
-
-  
 
 .contents
   .top__contents
     .content__text 
-      %p トレンド
+      %p トピック
     .content__videos
       - @topics.each do |topic|
         .content__video
-          .topics__post{:style => "background-image: url(#{topic.post});"}
+          =link_to topic_path(topic), class: 'topic__link-index' do
+            .topics__post{:style => "background-image: url(#{topic.post});"}
           
       
-        
-      -# - if @topic.image.attached?
-      -#   = image_tag @topic.image
-
-    -# .content__video
-    -# .content__video
-    -# .content__video
   .content__follow-text
     %p フォロー
   .content__follow-videos
