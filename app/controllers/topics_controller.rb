@@ -3,6 +3,8 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.includes(:user)
+    @randams = Topic.order("RAND()").all
+    @news = Topic.order(updated_at: :desc).limit(4)
     # @topics = Topic.all.with_attached_images
   end
 
@@ -13,7 +15,7 @@ class TopicsController < ApplicationController
   def create
     topic = Topic.create!(topic_params)
     # topic.images.attach(params[:topic][:images])
-    redirect_to topic
+    redirect_to root_path
   end
 
   def destroy

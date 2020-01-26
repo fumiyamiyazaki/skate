@@ -129,9 +129,10 @@
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
+  height: auto;
   .user__topics-show {
     width: 25%;
-    height: calc(100vh - 50vh);
+    height: 300px;
     border: 2px solid #ccc;
     .user__topic-post {
       width: 100%;
