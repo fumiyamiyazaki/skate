@@ -1,6 +1,6 @@
 .topic__post-header {
   height: 80px;
-  border-bottom: 1px solid #333;
+  // border-bottom: 1px solid #333;
   text-align: left;
   line-height: 80px;
   position: relative;
@@ -27,20 +27,23 @@
   }
 }
 .topic__post-show {
-  height: 80vh;
+  height: auto;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   // background-color: #fff;
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
   .topic__img-show {
     border: 3px solid #ccc;
+    margin: 50px 0 50px 0;
   }
 }
 .topic__text-show {
-  height: 300px;
+  height: auto;
   font-size: 13px;
-  border-top: 1px solid #333;
+  // border-top: 1px solid #333;
   font-size: 30px;
   padding-left: 20px;
   font-family: 'Comic Sans MS';

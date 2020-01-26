@@ -7,7 +7,8 @@
       =icon 'far', 'trash-alt'
       
 .topic__post-show
-  = image_tag @topic.post.url, width: '60%', height: '70%', class: 'topic__img-show'
+  = image_tag @topic.post.url, width: '800px', height: '600px', class: 'topic__img-show'
+
 .topic__text-show
   %br/
   =@topic.user.nickname
@@ -15,6 +16,8 @@
   %br/
   %br/
   = simple_format @topic.text, class: 'topic__text-format-show'
+  %br/
+  %br/
   
 
 .footer__nav-show
