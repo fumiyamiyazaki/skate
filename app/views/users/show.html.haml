@@ -7,13 +7,14 @@
       -if @user.image.present?
         =image_tag @user.image.url, width:'100%', height:'500px';
     .user__img-icon
-      = form_for(@user) do |f|
-        = f.label :image, class: 'img__label-show' do
-          =icon 'fas', 'clone'
-          =f.file_field :image, class: 'image__file-show'
-        =f.label :submit, class: 'submit__label' do
-          =icon 'fas', 'exchange-alt'
-          =f.submit '変更', class: 'image__submit-show' 
+      -if user_signed_in? && current_user.id == @user.id
+        = form_for(@user) do |f|
+          = f.label :image, class: 'img__label-show' do
+            =icon 'fas', 'clone'
+            =f.file_field :image, class: 'image__file-show'
+          =f.label :submit, class: 'submit__label' do
+            =icon 'fas', 'exchange-alt'
+            =f.submit '変更', class: 'image__submit-show' 
 
   .user__content-right
     .user__nickname-show

@@ -18,6 +18,13 @@
   .user__nickname-header-show:hover {
     color: blue;
   }
+  .topic__edit-show {
+    position: absolute;
+    right: 150px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #333;
+  }
   .topic__delete-show {
     position: absolute;
     right: 60px;
@@ -32,7 +39,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: #fff;
   border-bottom: 1px solid #333;
   border-top: 1px solid #333;
   .topic__img-show {
@@ -42,8 +48,6 @@
 }
 .topic__text-show {
   height: auto;
-  font-size: 13px;
-  // border-top: 1px solid #333;
   font-size: 30px;
   padding-left: 20px;
   font-family: 'Comic Sans MS';
