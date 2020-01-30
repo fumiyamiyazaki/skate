@@ -3,6 +3,8 @@
   =link_to user_path(@topic.user.id), class: 'user__nickname-header-show' do
     = @topic.user.nickname
   -if user_signed_in? && current_user.id == @topic.user_id
+    =link_to edit_topic_path(@topic.id), method: :get, class: 'topic__edit-show' do
+      =icon 'fas', 'edit'
     =link_to topic_path(@topic.id), method: :delete, class: 'topic__delete-show' do
       =icon 'far', 'trash-alt'
       

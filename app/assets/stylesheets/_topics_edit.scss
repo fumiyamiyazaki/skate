@@ -1,0 +1,86 @@
+.topic__post-header-edit {
+  height: 80px;
+  line-height: 80px;
+  position: relative;
+  span1 {
+    font-size: 15px;
+    padding-left: 20px;
+  }
+  .user__nickname-header-edit {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding-left: 20px;
+    font-family: 'Comic Sans MS';
+  }
+  .user__nickname-header-edit:hover {
+    color: blue;
+  }
+  span2 {
+    position: absolute;
+    left: 50%;
+    font-size: 30px;
+  }
+}
+
+.topic__post-edit {
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+  .topic__edit-flame {
+    height: 600px;
+    width: 800px;
+    border: 3px solid #ccc;
+    margin: 50px 0 50px 0;
+    .post__prev-edit {
+    height: 100%;
+    width: 100%;
+    } 
+  }
+}
+.topic__text-edit {
+  height: auto;
+  
+  .topic__user-name-edit {
+    font-size: 13px;
+    font-size: 30px;
+    padding-left: 20px;
+    font-family: 'Comic Sans MS';
+  }
+  .topic__form-edit {
+    text-align: center;
+    .topic__post-label-edit {
+      font-size: 50px;
+      color: #333;
+      position: absolute;
+      top: 718px;
+      .topic__post-field-edit {
+        display: none;
+      }
+    }
+    .topic__text-field-edit {
+      position: absolute;
+      left: 50px;
+      border: none;
+      font-size: 20px;
+      font-family: 'Hiragino Mincho Pro';
+      height: 100px;
+      width: auto;
+    }
+    .topic__text-field-edit:focus {
+      outline: none;
+      border: 1px solid #ccc;
+    }
+    .topic__submit-btn-edit {
+      height: 50px;
+      width: 400px;
+      background-color: rgb(115, 178, 230);
+      border: 3px solid #ccc;
+      border-radius: 50px;
+    }
+  }
+}
