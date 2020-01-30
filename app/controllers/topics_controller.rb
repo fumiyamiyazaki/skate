@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.includes(:user)
     @randams = Topic.order("RAND()").all
-    @news = Topic.order(updated_at: :desc).limit(4)
+    @news = Topic.order(updated_at: :desc).limit(10)
     # @topics = Topic.all.with_attached_images
   end
 

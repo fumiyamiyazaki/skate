@@ -73,16 +73,17 @@
     width: 100%;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    
+    overflow: hidden;
+    overflow: scroll;
     .content__videos{
       height: 100%;
-      width: 100%;
+      width: 4000px;
       display: flex;
       align-items: center;
       justify-content: space-around;
       position: relative;
-    
-      // animation: infinity-loop 30s infinite linear 1s both;
+
+      // animation: infinity-loop 20s infinite linear 1s both;
       
       .content__video {
         height: 400px;
@@ -90,6 +91,7 @@
         // margin-right: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
+        
         .topics__post {
           height: 100%;
           width: 100%;
@@ -98,19 +100,18 @@
           
         }
       }
+      
       // @keyframes infinity-loop {
       //   from {
-      //     transform: translateX(100%);
+      //     transform: translateX(0%);
       //   }
       //   to {
       //     transform: translateX(-100%);
       //   }
-      //   // from{
-      //   //   transform: translateX(100%);
-      //   // }
       // }
     }
   }
+  
 }
 
 
