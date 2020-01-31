@@ -5,5 +5,11 @@ Rails.application.routes.draw do
 
   resources :topics do
   end
-  resources :users, only: [:show, :edit, :update]
+  
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
 end

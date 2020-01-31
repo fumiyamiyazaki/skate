@@ -26,10 +26,10 @@
         =@user.topics_count
         %p topics
       .following__status
-        12
+        =link_to @user.following.count, '#', class: 'following__link' 
         %p following
       .followers__status
-        12
+        =link_to @user.followers.count, '#', class: 'follower__link'
         %p followers
     .user__follow-btn
       %button{type: 'submit', class: 'follow__btn-show'}
