@@ -73,7 +73,7 @@
     .user__follow-btn {
       padding-top: 60px;
       text-align: center;
-      .follow__btn-show {
+      .follow__btn {
         text-decoration: none;
         color: #fff;
         background-color: #0099eb;
@@ -83,10 +83,10 @@
         border-radius: 30px;
         border: 1px solid #0099eb;
       }
-      .follow__btn-show:focus {
+      .follow__btn:focus {
         outline: none;
       }
-      .follow__btn-show:hover {
+      .follow__btn:hover {
         opacity: 0.7;
         cursor: pointer;
       }
