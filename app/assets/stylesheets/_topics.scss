@@ -80,7 +80,7 @@
       width: 4000px;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      // justify-content: space-around;
       position: relative;
 
       // animation: infinity-loop 20s infinite linear 1s both;
@@ -88,7 +88,7 @@
       .content__video {
         height: 400px;
         width: 350px;
-        // margin-right: 20px;
+        margin-left: 30px;
         border: 1px solid #ccc;
         border-radius: 5px;
         
