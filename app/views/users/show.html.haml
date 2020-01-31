@@ -32,8 +32,7 @@
         =link_to @user.followers.count, '#', class: 'follower__link'
         %p followers
     .user__follow-btn
-      %button{type: 'submit', class: 'follow__btn-show'}
-        follow
+      =render 'follow_form' if user_signed_in?
 
 
 .user__topics-navbar
