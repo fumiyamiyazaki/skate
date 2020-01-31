@@ -14,7 +14,6 @@ class TopicsController < ApplicationController
 
   def create
     topic = Topic.create!(topic_params)
-    # topic.images.attach(params[:topic][:images])
     redirect_to root_path
   end
 
