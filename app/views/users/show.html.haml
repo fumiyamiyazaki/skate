@@ -29,10 +29,10 @@
         =@user.topics_count
         %p topics
       .following__status
-        =link_to @user.following.count, '#', class: 'following__link' 
+        =link_to @user.following.count, following_user_path, class: 'following__link' 
         %p following
       .followers__status
-        =link_to @user.followers.count, '#', class: 'follower__link'
+        =link_to @user.followers.count, followers_user_path, class: 'follower__link'
         %p followers
     .user__follow-btn
       =render 'follow_form' if user_signed_in?
