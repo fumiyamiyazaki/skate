@@ -1,1 +1,60 @@
-=@title
+.header__show-follow
+  =@user.nickname
+%br/
+
+
+.follow__title
+  .follow__count
+    =@user.following.count
+    %span following
+
+%br/
+
+.content__show-follow
+  -@user.following.each do |user|
+    .flame__follow
+      =link_to user_path(user), class: 'user__link-show-follow' do
+        -if user.image.present?
+          .image__show-follow{:style => "background-image: url(#{user.image});"}
+        -else
+          =image_tag "no-image.png", width:'100%', height:'200px';
+
+        .user__info-show-follow
+          .nickname__show-follow
+            =user.nickname
+          .email__show-follow
+            =user.email
+
+        
+        .user__status-show-follow
+          .topics__show-follow
+            =user.topics_count
+            %p topics
+          %span
+          .following__show-follow
+            =user.following.count
+            %p following
+          %span
+          .followers__show-follow
+            =user.followers.count
+            %p followers
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.user__nav-show
+  = render 'shared/footer_nav'
