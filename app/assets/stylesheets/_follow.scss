@@ -1,11 +1,12 @@
 .header__show-follow {
   height: 80px;
-  // border-bottom: 2px solid #ccc;
   text-align: center;
   line-height: 80px;
   font-size: 30px;
-  color: #ccc;
-  // box-shadow: 5px 5px 5px;
+  .header__link-show-follow {
+    text-decoration: none;
+    color: #ccc;
+  }
 }
 
 .follow__title {

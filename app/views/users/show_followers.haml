@@ -1,10 +1,44 @@
 .header__show-follow
-  =@user.nickname
+  =link_to user_path(@user), class: 'header__link-show-follow' do
+    =@user.nickname
+%br/
+
+
+.follow__title
+  .follow__count
+    =@user.followers.count
+    %span followers
+
+%br/
 
 .content__show-follow
   -@user.followers.each do |user|
     .flame__follow
+      =link_to user_path(user), class: 'user__link-show-follow' do
+        -if user.image.present?
+          .image__show-follow{:style => "background-image: url(#{user.image});"}
+        -else
+          =image_tag "no-image.png", width:'100%', height:'200px';
 
+        .user__info-show-follow
+          .nickname__show-follow
+            =user.nickname
+          .email__show-follow
+            =user.email
+
+        
+        .user__status-show-follow
+          .topics__show-follow
+            =user.topics_count
+            %p topics
+          %span
+          .following__show-follow
+            =user.following.count
+            %p following
+          %span
+          .followers__show-follow
+            =user.followers.count
+            %p followers
 
 
 
