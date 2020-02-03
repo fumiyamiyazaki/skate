@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root to: 'topics#index'
 
   resources :topics do
+    collection do
+      get :search
+    end
   end
 
   resources :users do
