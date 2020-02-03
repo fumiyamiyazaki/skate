@@ -1,6 +1,6 @@
 .footer__nav
-  =link_to '#', class: 'nav__icon' do
-    =icon 'fas', 'bars'
+  =link_to :back, class: 'nav__icon' do
+    =icon 'fas', 'undo-alt'
   =link_to root_path, class: 'nav__icon' do
     =icon 'fas', 'home'
   - if user_signed_in?

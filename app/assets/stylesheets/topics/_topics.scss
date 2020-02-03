@@ -78,10 +78,10 @@
     overflow: scroll;
     .content__videos{
       height: 100%;
-      width: 4000px;
+      width: 3900px;
       display: flex;
       align-items: center;
-      // justify-content: space-around;
+      // justify-content: space-evenly;
       position: relative;
 
       // animation: infinity-loop 20s infinite linear 1s both;
@@ -89,7 +89,7 @@
       .content__video {
         height: 400px;
         width: 350px;
-        margin-left: 30px;
+        margin-left: 35px;
         border: 1px solid #ccc;
         border-radius: 5px;
         
