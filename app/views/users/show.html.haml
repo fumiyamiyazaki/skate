@@ -17,7 +17,7 @@
             =f.file_field :image, class: 'image__file-show'
           =f.label :submit, class: 'submit__label' do
             =icon 'fas', 'exchange-alt'
-            =f.submit '変更', class: 'image__submit-show' 
+            =f.submit '画像を変更する', class: 'image__submit-show' 
 
   .user__content-right
     .user__nickname-show
@@ -40,10 +40,10 @@
 
 .user__topics-navbar
   .topics__navbar
-    %button{type: 'button', class: 'image__btn'}
-      Images
-    %button{type: 'button', class: 'video__btn'}
-      Videos
+    %button{class: 'image__btn'}
+      Topics  
+    -# %button{type: 'button', class: 'video__btn'}
+    -#   Videos
 
 .user__topics-contents
   - @topics.each do |topic|

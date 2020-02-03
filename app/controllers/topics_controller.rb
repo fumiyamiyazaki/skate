@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.includes(:user)
     @randams = Topic.order("RAND()").all
-    @news = Topic.order(updated_at: :desc).limit(10)
+    @news = Topic.order(updated_at: :desc).limit(10).includes(:user)
     # @topics = Topic.all.with_attached_images
   end
 
@@ -41,6 +41,7 @@ class TopicsController < ApplicationController
   def topic_params
     params.require(:topic).permit(:text, :post).merge(user_id: current_user.id)
   end
+
 
   def set_topic
     @topic = Topic.find(params[:id])
