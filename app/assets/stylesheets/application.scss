@@ -2,10 +2,10 @@
 @import "./font-awesome-sprockets";
 @import "./font-awesome";
 
-@import "topics";
-@import "topics_new";
-@import "topics_show";
-@import "topics_edit";
+@import "topics/topics";
+@import "topics/topics_new";
+@import "topics/topics_show";
+@import "topics/topics_edit";
 @import "users";
 @import "follow";
 @import "users/user_account";
