@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:show]
+  before_action :move_to_index, only: [:new, :create, :destroy, :edit, :update]
 
   def index
     @topics = Topic.includes(:user)
@@ -37,6 +38,10 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
   end
 
+  def search
+    @topics = Topic.search(params[:keyword])
+  end
+
   private
   def topic_params
     params.require(:topic).permit(:text, :post).merge(user_id: current_user.id)
@@ -45,6 +50,10 @@ class TopicsController < ApplicationController
 
   def set_topic
     @topic = Topic.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
 end
