@@ -1,68 +1,81 @@
-.header__show-follow {
-  height: 80px;
-  text-align: center;
-  line-height: 80px;
-  font-size: 30px;
-  .header__link-show-follow {
-    text-decoration: none;
-    color: #ccc;
-  }
-}
-
-.follow__title {
-  text-align: center;
-  .follow__count {
+.follow__body {
+  background: -moz-linear-gradient(65deg, #F13F79, #FFC778); 
+  background: -webkit-linear-gradient(65deg, #F13F79, #FFC778); 
+  background: linear-gradient(25deg, #F13F79, #FFC778); 
+  height: 100vh;
+  overflow: scroll;
+  padding-bottom: 80px;
+  .header__show-follow {
+    height: 80px;
     text-align: center;
-    width: 300px;
-    font-size: 20px;
-    padding: 0.5em 0;
-    border-top: solid 3px #ccc;
-    border-bottom: solid 3px #ccc;
-    display: inline-block;
-    color: #333;
-  }
-}
-
-.content__show-follow {
-  height: auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  // overflow: scroll;
-  text-align: center;
-  .flame__follow {
-    height: 300px;
-    width: 20%;
-    border: 1px solid #ccc;
-    margin-top: 30px;
-    // position: relative;
-    .user__link-show-follow {
+    line-height: 80px;
+    font-size: 30px;
+    .header__link-show-follow {
       text-decoration: none;
-      .image__show-follow {
-        width: 100%;
-        height: 200px;
-        background-size: cover;
-        background-position: center;
-        border-bottom: 1px solid rgb(243, 242, 242);
-        opacity: 0.7;
-      }
-      .user__info-show-follow { 
-        .nickname__show-follow {
-          font-size: 20px;
+      color: #ccc;
+    }
+  }
+
+  .follow__title {
+    text-align: center;
+    .follow__count {
+      text-align: center;
+      width: 300px;
+      font-size: 20px;
+      padding: 0.5em 0;
+      border-top: solid 3px #fff;
+      border-bottom: solid 3px #fff;
+      display: inline-block;
+      color: #333;
+    }
+  }
+
+  .content__show-follow {
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+    text-align: center;
+    .flame__follow {
+      height: 300px;
+      width: 20%;
+      border: 1px solid #ccc;
+      margin-top: 30px;
+      background-color: #fff;
+      margin-left: 10px;
+      // position: relative;
+      .user__link-show-follow {
+        text-decoration: none;
+        .image__show-follow {
+          width: 100%;
+          height: 200px;
+          background-size: cover;
+          background-position: center;
+          border-bottom: 1px solid rgb(243, 242, 242);
+          opacity: 0.7;
+        }
+        .user__info-show-follow { 
+          .nickname__show-follow {
+            font-size: 20px;
+            color: black;
+          }
+          .email__show-follow {
+            font-size: 15px;
+            color: rgb(170, 170, 170);
+            opacity: 0.8;
+          }
+        }
+        .user__status-show-follow {
+          font-size: 10px;
           color: black;
+          display: flex;
+          justify-content: space-around;
         }
-        .email__show-follow {
-          font-size: 15px;
-          color: rgb(170, 170, 170);
-          opacity: 0.8;
-        }
-      }
-      .user__status-show-follow {
-        font-size: 10px;
-        color: black;
-        display: flex;
-        justify-content: space-around;
       }
     }
   }
 }
+
+
+
