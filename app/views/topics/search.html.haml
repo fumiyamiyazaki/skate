@@ -1,10 +1,19 @@
-=form_with(url: search_topics_path, local: true, method: :get, class: 'topic__search') do |f|
-  =f.text_field :keyword, placeholder: 'search', class: 'topic__search-input'
-  =f.submit 'search', class: 'topic__search-submit'
+.header__search-topic
+  =form_with(url: search_topics_path, local: true, method: :get, class: 'topic__search') do |f|
+    =f.text_field :keyword, placeholder: 'search', class: 'topic__search-input'
+    %button{:type => "submit"}
+      =icon 'fas', 'search'
+  
+
+    -# =f.submit 'search', class: 'topic__seach-submit' 
+      
 
 
 .topic__search-content
   -@topics.each do |topic|
-    .topics__all-index
+    .topics__search
       =link_to topic_path(topic), class: 'topic__link-show' do
-        =image_tag topic.post.url
+        =image_tag topic.post.url, class: 'topic__post-search'
+
+.footer__nav
+  = render 'shared/footer_nav'
