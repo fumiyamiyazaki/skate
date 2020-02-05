@@ -18,6 +18,7 @@
 .contents
   .top__content-text
     %p NEW TOPICS
+    =icon 'fas', 'arrows-alt-h', class: 'new__topics-nav'
   .top__contents
     .content__videos
       - @news.each do |topic|
