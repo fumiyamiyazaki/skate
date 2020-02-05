@@ -157,8 +157,9 @@
     .user__topic-post {
       width: 100%;
       height: 100%;
-      background-size: cover;
-      background-position: center;
+    }
+    .user__topic-post:focus {
+      outline: none;
     }
   }
 }

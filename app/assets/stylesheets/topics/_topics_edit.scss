@@ -34,12 +34,15 @@
   .topic__edit-flame {
     height: 600px;
     width: 800px;
-    border: 3px solid #ccc;
+    border: 3px solid #fff;
     margin: 50px 0 50px 0;
     .post__prev-edit {
     height: 100%;
     width: 100%;
     } 
+    .post__prev-edit:focus {
+      outline: none;
+    }
   }
 }
 .topic__text-edit {

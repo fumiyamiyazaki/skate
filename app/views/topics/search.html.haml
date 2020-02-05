@@ -12,9 +12,15 @@
 
 .topic__search-content
   -@topics.each do |topic|
-    .topics__search
-      =link_to topic_path(topic), class: 'topic__link-show' do
-        =image_tag topic.post.url, class: 'topic__post-search'
+    -if topic.post?
+      -if topic.post.file.content_type.include?('image/')
+        .topics__search
+          =link_to topic_path(topic), class: 'topic__link-search' do
+            =image_tag topic.post.url, class: 'topic__post-search'
+      -else
+        .topics__search
+          =link_to topic_path(topic), class: 'topic__link-search' do
+            =video_tag topic.post.url, controls: true, autobuffer: true, class: 'topic__post-search'
 
 .footer__nav
   = render 'shared/footer_nav'
