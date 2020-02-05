@@ -204,8 +204,8 @@
   width: 120%;
   height: 76%;
   margin: 6% -10% 0;
-  background-image: url(https://www.s-n-p.jp/global-image/units/img/2059-1-20151026121343_b562d9a67ab3c6.jpg);
-  // background-size: cover;
+  background-image: url(2059-1-20151026121343_b562d9a67ab3c6.jpg);
+  background-size: cover;
   background-position: 130%;
   opacity: 0.6;
   -webkit-transform-origin: left center;
@@ -215,8 +215,24 @@
   -ms-transform: rotate(2deg);
   transform: rotate(2deg);
   z-index: -1;
+  animation: bg-img 20s ease-in-out 2s infinite;
 }
-
+@-webkit-keyframes bg-img {
+  0% { background-image: url(2059-1-20151026121343_b562d9a67ab3c6.jpg); }
+  20% { background-image: url(bmx.jpeg); }
+  40% { background-image: url(shutterstock_649826830.jpg); }
+  60% { background-image: url(image015.jpgg); }
+  80% { background-image: url(snowboard.jpg); }
+  100% { background-image: url(2059-1-20151026121343_b562d9a67ab3c6.jpg); }
+}
+@keyframes bg-img {
+  0% { background-image: url(2059-1-20151026121343_b562d9a67ab3c6.jpg); }
+  20% { background-image: url(bmx.jpeg);}
+  40% { background-image: url(shutterstock_649826830.jpg); }
+  60% { background-image: url(image015.jpg); }
+  80% { background-image: url(snowboard.jpg); }
+  100% { background-image: url(2059-1-20151026121343_b562d9a67ab3c6.jpg); }
+}
 
 
 
