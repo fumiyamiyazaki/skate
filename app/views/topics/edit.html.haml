@@ -5,10 +5,14 @@
   %span2  編集
       
 .topic__post-edit
-  .topic__edit-flame
-    -if @topic.post.present?
-      =image_tag @topic.post.url, widht: '800px', height: '600px', class: 'post__prev-edit'
-    
+  -if @topic.post?
+    -if @topic.post.file.content_type.include?('image/')
+      .topic__edit-flame
+        =image_tag @topic.post.url, class: 'post__prev-edit'
+    -else
+    .topic__edit-flame
+      =video_tag @topic.post.url, controls: true, autobuffer: true, class: 'post__prev-edit'
+
 
 .topic__text-edit
   %br/

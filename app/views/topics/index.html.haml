@@ -22,9 +22,16 @@
   .top__contents
     .content__videos
       - @news.each do |topic|
-        .content__video
-          =link_to topic_path(topic), class: 'topic__link-index' do
-            .topics__post{:style => "background-image: url(#{topic.post});"}
+        -if topic.post?
+          -if topic.post.file.content_type.include?('image/')
+            .content__video
+              =link_to topic_path(topic), class: 'topic__link-index' do
+                =image_tag topic.post.url, class: 'topics__post-new'
+          -else
+            .content__video
+              =link_to topic_path(topic), class: 'topic__link-index' do
+                =video_tag topic.post.url, controls: true, autobuffer: true, class: 'topics__post-new'
+
 %br/
 %br/
 %br/
@@ -35,12 +42,15 @@
 
 .topics__content-all-index
   - @randams.each do |topic|
-    -# .user__topics-show
-      -# =image_tag topic.post.url
-    .topics__all-index
-      =link_to topic_path(topic), class: 'topic__link-show' do
-        .topic-post-index{:style => "background-image: url(#{topic.post});"}
-        
+    -if topic.post?
+      -if topic.post.file.content_type.include?('image/')
+        .topics__all-index
+          =link_to topic_path(topic), class: 'topic__link-show' do
+            =image_tag topic.post.url, class: 'topic__post-index'
+      -else
+        .topics__all-index
+          =link_to topic_path(topic), class: 'topic__link-show' do
+            =video_tag topic.post.url, controls: true, autobuffer: true, class: 'topic__post-index'
 
 
 

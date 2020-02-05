@@ -9,7 +9,16 @@
       =icon 'far', 'trash-alt'
       
 .topic__post-show
-  = image_tag @topic.post.url, width: '800px', height: '600px', class: 'topic__img-show'
+  .topic__post-show-flame
+    -if @topic.post?
+      -if @topic.post.file.content_type.include?('image/')
+        .content__video
+          =image_tag @topic.post.url, class: 'topic__img-show'
+      -else
+        .content__video
+          =video_tag @topic.post.url, controls: true, autobuffer: true, class: 'topic__img-show'
+
+
 
 .topic__text-show
   %br/

@@ -3,7 +3,7 @@
     = form_for(@topic, html: { multipart: true }) do |f|
       =f.label :post, class: 'topic__post-label' do
         =icon 'fas', 'plus-square'
-        = f.file_field :post,class: 'topic__post-field' 
+        = f.file_field :post, accept: 'image/jpeg,image/gif,image/png,video/*', class: 'topic__post-field' 
       %span
       = f.text_area :text, placeholder: 'テキスト', class: 'topic__text-field'
       %br/
