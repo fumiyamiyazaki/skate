@@ -162,7 +162,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
-    animation: infinity-loop 30s infinite linear 1s both;
+    // animation: infinity-loop 30s infinite linear 1s both;
     .follow-video {
       height: 150px;
       width: 150px;
@@ -171,6 +171,50 @@
     }
   }
 }
+
+.bottom__content-index {
+  position: relative;
+  overflow: hidden;
+  // margin: 1% 0;
+  padding: 15px 0;
+  .bottom__cont-inner {
+    box-sizing: boder-box;
+    width: 100%;
+    max-width: 640px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 100px 10px 120px;
+    color: #fff;
+    text-align: center;
+  }
+
+}
+.bottom__content-index:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 76%;
+  margin: 6% -10% 0;
+  background-image: url(https://www.s-n-p.jp/global-image/units/img/2059-1-20151026121343_b562d9a67ab3c6.jpg);
+  // background-size: cover;
+  background-position: 130%;
+  opacity: 0.6;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  z-index: -1;
+}
+
+
+
+
+
+
 
 
 .footer__nav {

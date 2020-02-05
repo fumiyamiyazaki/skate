@@ -1,4 +1,5 @@
 .header__search-topic
+  =icon 'fas', 'snowboarding', class: 'skate__icon-search'
   =form_with(url: search_topics_path, local: true, method: :get, class: 'topic__search') do |f|
     =f.text_field :keyword, placeholder: 'search', class: 'topic__search-input'
     %button{:type => "submit"}
