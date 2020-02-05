@@ -15,9 +15,9 @@
           = f.label :image, class: 'img__label-show' do
             =icon 'fas', 'clone'
             =f.file_field :image, class: 'image__file-show'
-          =f.label :submit, class: 'submit__label' do
-            =icon 'fas', 'exchange-alt'
-            =f.submit '画像を変更する', class: 'image__submit-show' 
+          =icon 'fas', 'arrow-right', class: 'arrow__icon'
+          %button{:type => "submit"}
+            =icon 'far', 'check-circle'
 
   .user__content-right
     .user__nickname-show

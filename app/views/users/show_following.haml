@@ -1,6 +1,7 @@
 .follow__body
   .header__show-follow
-    =@user.nickname
+    =link_to user_path(@user), class: 'header__link-show-follow' do
+      =@user.nickname
   %br/
 
 
