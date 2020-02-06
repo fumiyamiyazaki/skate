@@ -11,7 +11,10 @@
   
   .topic__post-prev
     -if @topic.post.present?
-      =image_tag @topic.post.url, widht: '100px', height: '100px', class: 'post_prev'
+      -if @topic.post.file.content_type.include?('image/')
+        =image_tag @topic.post.url, widht: '100px', height: '100px', class: 'post_prev'
+      -else
+        =image_tag "no-image.png", width: '700px', height: '400px', class: 'post_prev'
     -else
       =image_tag "no-image.png", width: '700px', height: '400px', class: 'post_prev'
 

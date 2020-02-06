@@ -40,22 +40,22 @@
 
 .user__topics-navbar
   .topics__navbar
-    %button{class: 'image__btn'}
-      Topics  
-    -# %button{type: 'button', class: 'video__btn'}
+    %button{type: 'button', class: 'topic__btn'}
+      Topics
+    -# %a.topic__btn.bs{href: "#topic2"}
     -#   Videos
 
 .user__topics-contents
   - @topics.each do |topic|
     -if topic.post?
       -if topic.post.file.content_type.include?('image/')
-        .user__topics-show
+        .user__topics-show.it.is__active-topic
           =link_to topic_path(topic), class: 'topic__link-show' do
-            =image_tag topic.post.url, class: 'user__topic-post'
+            =image_tag topic.post.url, class: 'user__topic-image'
       -else
-        .user__topics-show
+        .user__topics-show.vt.shows
           =link_to topic_path(topic), class: 'topic__link-show' do
-            =video_tag topic.post.url, controls: true, autobuffer: true, class: 'user__topic-post'     
+            =video_tag topic.post.url, controls: true, autobuffer: true, class: 'user__topic-video'     
 
 %br/
 %br/
@@ -70,3 +70,10 @@
 
 .user__nav-show
   = render 'shared/footer_nav'
+
+
+
+
+  
+
+ 

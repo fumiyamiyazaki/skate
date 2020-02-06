@@ -110,39 +110,39 @@
   .topics__navbar {
     height: 50px;
     box-shadow: 2px 0 2px #ccc;
-    // display: flex;
-    .image__btn {
+    display: flex;
+    .topic__btn {
       width: 100%;
       height: 100%;
       background-color: #fff;
       color: #333;
       font-size: 20px;
     }
-    // .image__btn:focus {
-    //   outline: none;
-    //   background-color: #333;
-    //   color: #fff;
-    // }
-    // .image__btn:hover {
-    //   opacity: 0.8;
-    //   cursor: pointer;
-    // }
-    .video__btn {
-      width: 50%;
-      height: 100%;
-      background-color: #fff;
-      color: #333;
-      font-size: 20px;
+    .topic__btn:hover {
+      opacity: 0.8;
+      cursor: pointer;
     }
-    .video__btn:focus {
+    .topic__btn:focus {
       outline: none;
       background-color: #333;
       color: #fff;
     }
-    .video__btn:hover {
-      opacity: 0.8;
-      cursor: pointer;
-    }
+    // .video__btn {
+    //   width: 50%;
+    //   height: 100%;
+    //   background-color: #fff;
+    //   color: #333;
+    //   font-size: 20px;
+    // }
+    // .video__btn:focus {
+    //   outline: none;
+    //   background-color: #333;
+    //   color: #fff;
+    // }
+    // .video__btn:hover {
+    //   opacity: 0.8;
+    //   cursor: pointer;
+    // }
   }
 }
 .user__topics-contents {
@@ -154,14 +154,22 @@
     width: 25%;
     height: 300px;
     border: 2px solid #ccc;
-    .user__topic-post {
+    // display: none;
+    .user__topic-image {
       width: 100%;
       height: 100%;
     }
-    .user__topic-post:focus {
+    .user__topic-video {
+      width: 100%;
+      height: 100%;
+    }
+    .user__topic-video:focus {
       outline: none;
     }
   }
+  // .is__active-topic {
+  //   display: block;
+  // }
 }
 
 
