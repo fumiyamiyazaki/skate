@@ -14,8 +14,13 @@ class TopicsController < ApplicationController
   end
 
   def create
-    topic = Topic.create!(topic_params)
+    topic_params[:post].each do |a|
+      topic = Topic.new(topic_params.clone.merge({post: a}))
+      topic.save
+    end
     redirect_to root_path
+    # topic = Topic.create!(topic_params)
+    # redirect_to root_path
   end
 
   def destroy
@@ -44,7 +49,7 @@ class TopicsController < ApplicationController
 
   private
   def topic_params
-    params.require(:topic).permit(:text, :post).merge(user_id: current_user.id)
+    params.require(:topic).permit(:text, post: []).merge(user_id: current_user.id)
   end
 
 
