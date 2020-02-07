@@ -52,3 +52,7 @@ production:
   database: skate_production
   username: skate
   password: <%= ENV['SKATE_DATABASE_PASSWORD'] %>
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
