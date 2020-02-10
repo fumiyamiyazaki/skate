@@ -5,9 +5,9 @@
   .user__content-left
     .user__profile-image
       -if @user.image.present?
-        =image_tag @user.image.url, width:'100%', height:'500px';
+        =image_tag @user.image.url, width:'100%', height:'100%';
       -else
-        =image_tag "no-image.png", width:'100%', height:'500px';
+        =image_tag "no-image.png", width:'100%', height:'100%';
         
     .user__img-icon
       -if user_signed_in? && current_user.id == @user.id

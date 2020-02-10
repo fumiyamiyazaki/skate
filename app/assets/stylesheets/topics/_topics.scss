@@ -44,7 +44,7 @@
     .icon-search {
       text-align: center;
       line-height: 100px;
-      margin-right: 50px;
+      // margin-right: 50px;
       font-size: 30px;
       color: #ccc;
     }
@@ -184,7 +184,7 @@
   overflow: hidden;
   // margin: 1% 0;
   padding: 15px 0;
-  .bottom__cont-inner {
+  .bottom__content-inner {
     box-sizing: boder-box;
     width: 100%;
     max-width: 640px;
@@ -259,6 +259,96 @@
   }
   .nav__icon:hover {
     color: black;
+  }
+}
+
+
+
+/* 〜479px：スマートフォン縦------------------------------ */
+
+@media screen and (max-width:479px) { 
+  .header {
+    height: 70px;
+    line-height: 70px;
+    .header__text {
+      .home__link {
+        font-size: 15px;
+        i {
+          line-height: 50px;
+        }
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+    .header__right-nav {
+      font-size: 10px;
+      .header__user-btn {
+        font-size: 15px;
+        margin-right: 20px;
+        padding-left: 20px;
+      }
+      .icon-search {
+        font-size: 15px;
+        margin-right: 10px;
+        line-height: 70px;
+      }
+    }
+  }
+  .contents {
+    height: 300px;
+    margin: 30px 0 20px 0;
+    .top__content-text {
+      p {
+        font-size: 15px;
+        padding: 0 0 10px 20px;
+      }
+      .new__topics-nav {
+        font-size: 30px;
+      }
+    }
+    .top__contents {
+      .content__videos {
+        width: 2150px;
+        .content__video {
+          height: 250px;
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .topics__all-text {
+    padding-left: 20px;
+    p {
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+  }
+  .topics__content-all-index {
+    padding: 20px 0 20px 0;
+    justify-content: space-evenly;
+    .topics__all-index {
+      height: 120px;
+      width: 33%;
+      border: 0.5px solid #fff;
+    }
+  }
+
+  .bottom__content-index {
+    padding: 5px 0 20px 0;
+    .bottom__content-inner {
+      max-width: 440px;
+      height: 250px;
+    }
+  }
+
+  .footer__nav {
+    height: 45px;
+    .nav__icon {
+      line-height: 45px;
+      font-size: 20px;
+    }
   }
 }
 

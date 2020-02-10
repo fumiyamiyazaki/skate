@@ -24,7 +24,7 @@
     80% { -webkit-transform: rotate(1deg); }
     90% { -webkit-transform: rotate(-1deg); }
     100% { -webkit-transform: rotate(0deg); }
-}
+  }
   .topic__search {
     padding-left: 50px;
     .topic__search-input {
@@ -67,6 +67,40 @@
     }
     .topic__post-search:focus {
       outline:none;
+    }
+  }
+}
+
+
+/* 〜479px：スマートフォン縦------------------------------ */
+
+@media screen and (max-width:479px) { 
+  .header__search-topic {
+    height: 70px;
+    line-height: 70px;
+    .skate__icon-search {
+      line-height: 70px;
+      font-size: 25px;
+    }
+    .topic__search {
+      padding-left: 15px;
+      .topic__search-input {
+        width: 250px;
+        height: 30px;
+        padding-left: 3px;
+        border-radius: 8px;
+      }
+      button {
+        font-size: 15px;
+      }
+    }
+  }
+  .topic__search-content {
+    padding: 5px 0 50px 0;
+    .topics__search {
+      width: 33%;
+      height: 100px;
+      border: 0.5px solid #fff;
     }
   }
 }
