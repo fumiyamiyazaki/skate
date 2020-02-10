@@ -1,11 +1,11 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show]
+  before_action :set_topic, only: [:destroy, :edit, :update, :show]
   before_action :move_to_index, only: [:new, :create, :destroy, :edit, :update]
 
   def index
     @topics = Topic.includes(:user)
     @randams = Topic.all.shuffle
-    @news = Topic.order(updated_at: :desc).limit(10).includes(:user)
+    @news = Topic.order(updated_at: :desc).limit(11).includes(:user)
     # @topics = Topic.all.with_attached_images
   end
 
@@ -14,13 +14,16 @@ class TopicsController < ApplicationController
   end
 
   def create
-    topic_params[:post].each do |a|
-      topic = Topic.new(topic_params.clone.merge({post: a}))
-      topic.save
+    @topic = Topic.new(topic_params)
+    if @topic.save
+      redirect_to root_path
+    else
+      render new_topic_path
     end
-    redirect_to root_path
-    # topic = Topic.create!(topic_params)
-    # redirect_to root_path
+     # topic_params[:post].each do |a|
+    #   topic = Topic.new(topic_params.clone.merge({post: a}))
+    #   topic.save
+    # end
   end
 
   def destroy
@@ -49,7 +52,7 @@ class TopicsController < ApplicationController
 
   private
   def topic_params
-    params.require(:topic).permit(:text, post: []).merge(user_id: current_user.id)
+    params.require(:topic).permit(:text, :post).merge(user_id: current_user.id)
   end
 
 
