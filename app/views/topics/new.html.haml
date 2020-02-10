@@ -1,9 +1,9 @@
 .topic__post-content
   .topic__post-form
-    = form_for(@topic, html: { multipart: true }) do |f|
+    = form_for(@topic, html: { local: true }) do |f|
       =f.label :post, class: 'topic__post-label' do
         =icon 'fas', 'plus-square', class: 'icon__plus'
-        = f.file_field :post, multiple: true, accept: 'image/jpeg,image/gif,image/png,video/*', class: 'topic__post-field' 
+        = f.file_field :post, accept: 'image/jpeg,image/gif,image/png,video/*', class: 'topic__post-field' 
       %span
       = f.text_area :text, placeholder: 'テキスト', class: 'topic__text-field'
       %br/
