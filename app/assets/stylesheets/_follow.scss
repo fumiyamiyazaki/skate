@@ -35,15 +35,14 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    
     text-align: center;
     .flame__follow {
       height: 300px;
       width: 20%;
       border: 1px solid #ccc;
       margin-top: 30px;
-      background-color: #fff;
       margin-left: 10px;
+      background-color: #fff;
       // position: relative;
       .user__link-show-follow {
         text-decoration: none;
@@ -76,6 +75,59 @@
     }
   }
 }
+
+/* 〜479px：スマートフォン縦------------------------------ */
+
+@media screen and (max-width:479px) { 
+  .follow__body {
+    padding-bottom: 40px;
+    .header__show-follow {
+      height: 60px;
+      line-height: 60px;
+      font-size: 30px;
+    }
+    .follow__title {
+      .follow__count {
+        font-size: 15px;
+        border-top: solid 2px #fff;
+        border-bottom: solid 2px #fff;
+      }
+    }
+    .content__show-follow {
+      .flame__follow {
+        height: 170px;
+        width: 30%;
+        margin-top: 10px;
+        margin-left: 0;
+        .user__link-show-follow {
+          .image__show-follow {
+            height: 100px;
+          }
+          .user__info-show-follow {
+            margin-top: 5px;
+            .nickname__show-follow {
+              font-size: 10px;
+            }
+            .email__show-follow {
+              font-size: 7px;
+            }
+          }
+          .user__status-show-follow {
+            font-size:10px;
+            // -webkit-transform: scale(0.8);
+            // -webkit-transform-origin:0 0;
+            // position: relative;
+            // left: 10px;
+            // p {
+            //   margin-left: 5px;
+            // }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 
 

@@ -180,17 +180,73 @@
 
 @media screen and (max-width:479px) { 
   .user__header-show {
-    height: 30px;
-    line-height: 30px;
+    height: 25px;
+    line-height: 25px;
     font-size: 20px;
   }
   .user__content-show {
     .user__content-left {
       height: 200px;
       .user__img-icon {
-        top: 60%;
-        left: 50%;
+        top: 85%;
+        left: 45%;
+        .img__label-show {
+          font-size: 15px;
+          color: #ccc;
+        }
+        .arrow__icon {
+          font-size: 15px;
+          color: #ccc;
+          padding: 0 5px;
+        }
+        button {
+          font-size: 15px;
+          color: #ccc;
+          position: relative;
+          right: 15px;
+        }
       }
+    }
+    .user__content-right {
+      height: 200px;
+      .user__nickname-show {
+        padding-top: 5px;
+        font-size: 25px;
+      }
+      .user__email-show {
+        font-size: 15px;
+      }
+      .user__status-show {
+        padding-top: 20px;
+        font-size: 20px;
+        p {
+          font-size: 10px;
+        }
+      }
+      .user__follow-btn {
+        padding-top: 35px;
+        .follow__btn {
+          height: 30px;
+          width: 150px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .user__topics-navbar {
+    .topics__navbar {
+      height: 30px;
+      .topic__btn {
+        font-size: 15px;
+      }
+    }
+  }
+  .user__topics-contents {
+    .user__topics-show {
+      width: 33%;
+      height: 130px;
+      border: 0.5px solid #ccc;
+      margin-left: 1px;
     }
   }
 }
