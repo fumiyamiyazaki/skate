@@ -76,3 +76,34 @@ z-index: -1;
 }
 
 
+/* 〜479px：スマートフォン縦------------------------------ */
+
+@media screen and (max-width:479px) { 
+  .user_account__contents {
+    .user_account__skate {
+      // position: relative;
+      top: 50px;
+      left: 5px;
+      font-size: 40px;
+    }
+    .user_account__title {
+      font-size: 25px;
+    }
+    .user_account__form {
+      top: 110px;
+      left: 10px;
+      .field {
+        padding-bottom: 5px;
+      }
+      .actions {
+        padding: 10px 0 10px 0;
+        .user__submit-new {
+          height: 30px;
+          width: 140px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
