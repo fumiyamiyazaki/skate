@@ -20,7 +20,6 @@
     =@topic.user.nickname
     %span ...
   %br/
-  %br/
   .topic__form-edit
     = form_for(@topic, html: { multipart: true }) do |f|
       =f.label :post, class: 'topic__post-label-edit' do
