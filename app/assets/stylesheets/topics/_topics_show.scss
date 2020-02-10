@@ -60,11 +60,53 @@
   font-size: 30px;
   padding-left: 20px;
   font-family: 'Comic Sans MS';
-  
-  // overflow: scroll;
   .topic__text-format-show {
     font-size: 20px;
     font-family: 'Hiragino Mincho Pro';
-    padding-left: 50px;
+    padding-left: 70px;
+  }
+}
+
+/* 〜479px：スマートフォン縦------------------------------ */
+
+@media screen and (max-width:479px) { 
+  .topic__post-header {
+    height: 60px;
+    line-height: 60px;
+    span {
+      font-size: 10px;
+      padding-left: 10px;
+    }
+    .user__nickname-header-show {
+      font-size: 25px;
+      padding-left: 5px;
+    }
+    .topic__edit-show {
+      font-size: 20px;
+      right: 80px
+    }
+    .topic__delete-show {
+      font-size: 20px;
+      right: 30px
+    }
+  }
+  .topic__post-show {
+    .topic__post-show-flame {
+      height: 300px;
+      width: 400px;
+      margin: 30px 0 30px 0;
+      .topic__img-show {
+        height: 250px;
+        width: 300px;
+      }
+    }
+  }
+  .topic__text-show {
+    font-size: 20px;
+    padding-left: 10px;
+    .topic__text-format-show {
+      font-size: 15px;
+      padding-left: 45px;
+    }
   }
 }

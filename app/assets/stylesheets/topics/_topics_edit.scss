@@ -94,3 +94,14 @@
     }
   }
 }
+
+/* 〜479px：スマートフォン縦------------------------------ */
+
+@media screen and (max-width:479px) { 
+  height: 60px;
+  line-height: 60px;
+  span1 {
+    font-size: 10px;
+    padding-left: 10px;
+  }
+}
