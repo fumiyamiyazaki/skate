@@ -27,5 +27,5 @@
 /config/master.key
 # Ignore uploaded files in development
 /public/uploads
-#config/secrets.yml
+# Ignore uploaded test images.
 /public/uploads
